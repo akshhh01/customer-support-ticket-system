@@ -1,0 +1,42 @@
+  <app-admin-nav></app-admin-nav>
+<div class="customer-container">
+  <h1>Customer Support Representatives</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Role</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+
+    <tbody *ngIf="csrs.length > 0" >
+    <tr *ngFor="let item of csrs">
+      <div *ngIf="item.id!==null">
+        <td>{{ item.id }}</td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.email }}</td>
+        <td>{{ item.mobile }}</td>
+        <td>
+          <span class="role-badge">
+            {{ item.role }}
+          </span>
+        </td>
+        <td>
+          <button (click)="assignToCsr(item.id)" class="view-button">
+            Assign
+          </button>
+        </td>
+        </div>
+      </tr>
+    </tbody>
+  </table>
+
+  <div *ngIf="csrs.length === 0" class="no-data">
+    No customer representatives found.
+  </div>
+</div>

@@ -1,0 +1,30 @@
+
+  <app-admin-nav></app-admin-nav>
+<body>
+    <h1>Customer Data</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Role</th>
+                <th>View-tickets</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let item of customer">
+          <div *ngIf="item.id!==null">
+            <tr>
+                <td>{{item.id}}</td>
+                <td>{{item.name}}</td>
+                <td>{{item.email}}</td>
+                <td>{{item.mobile}}</td>
+                <td>{{item.role}}</td>
+                <td><button (click)="getTicket(item.id)">view</button></td>
+            </tr>
+</div>
+        </tbody>
+    </table>
+</body>

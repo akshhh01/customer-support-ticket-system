@@ -1,0 +1,26 @@
+<!-- Comment Box Section -->
+<h2>💬 Comment Box</h2>
+
+<div class="comment-box">
+  <textarea
+    [(ngModel)]="newComment"
+    placeholder="Add your comment here..."
+    rows="4"
+  ></textarea>
+  <button (click)="addComment()" [disabled]="!newComment.trim()">Submit Comment</button>
+</div>
+
+<!-- Display Comments -->
+<div class="comments-list" *ngIf="comments && comments.length > 0">
+  <h3>Comments</h3>
+  <ul>
+    <li *ngFor="let comment of comments">
+      🗨️ {{ comment.comments }}
+    </li>
+  </ul>
+</div>
+
+<!-- Empty state -->
+<div class="empty-comments" *ngIf="comments.length === 0">
+  <p>No comments yet. Be the first to add one!</p>
+</div>

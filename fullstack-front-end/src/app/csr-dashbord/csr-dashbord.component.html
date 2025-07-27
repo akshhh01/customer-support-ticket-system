@@ -1,0 +1,49 @@
+<app-csr-nav></app-csr-nav>
+
+<div class="container">
+  <header>
+    <h1>User Tickets</h1>
+  </header>
+
+  <div *ngIf="tickets && tickets.length > 0" class="ticket-list">
+    <div class="ticket-card" *ngFor="let item of tickets">
+
+      <div class="ticket-header" *ngIf="item.status === 'IN_PROGRESS'">
+
+        <span class="ticket-status status-open">{{item.status}}</span>
+      </div>
+
+      <div class="ticket-meta">
+        <span>#TKT-{{ item.id }}</span>
+        <span>{{item.createdAt | date:'medium'}}</span>
+      </div>
+
+      <p class="ticket-excerpt">
+        {{ item.description }}...
+      </p>
+
+      <div class="ticket-footer">
+        <span class="priority" [ngClass]="'priority-' + item.priority.toLowerCase()">
+          {{ item.priority }} Priority
+        </span>
+      </div>
+
+      <div class="ticket-actions">
+        <select [(ngModel)]="status">
+          <option value="IN_PROGRESS">IN_PROGRESS</option>
+          <option value="RESOLVED">RESOLVED</option>
+          <option value="OPEN">OPEN</option>
+        </select>
+        <button (click)="updateTicket(item,status)">Update Ticket</button>
+      </div>
+
+      <div class="comment"><button >add-Comment</button></div>
+
+    </div>
+  </div>
+
+  <div class="empty-state" *ngIf="tickets && tickets.length === 0">
+    <h3>No tickets found</h3>
+    <p>You haven't been assigned any tickets yet.</p>
+  </div>
+</div>

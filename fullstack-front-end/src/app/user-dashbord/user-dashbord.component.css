@@ -1,0 +1,334 @@
+ /* .stats-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+  background-color: #f9f9f9;
+}
+
+.stat-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-card h3 {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.stat-card .count {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0.25rem;
+}
+
+.stat-card .trend {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.stat-card.create {
+  border-top: 5px solid #4e73df;
+}
+
+.stat-card.pending {
+  border-top: 5px solid #f6c23e;
+}
+
+.stat-card.approved {
+  border-top: 5px solid #1cc88a;
+}
+
+.stat-card.rejected {
+  border-top: 5px solid #e74a3b;
+}
+
+.stat-card .trend::before {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.stat-card .trend {
+  color: #6c757d;
+}
+
+.stat-card.approved .trend {
+  color: #1cc88a;
+}
+
+.stat-card.rejected .trend {
+  color: #e74a3b;
+}
+
+.stat-card.create .trend {
+  color: #4e73df;
+}
+
+.stat-card.pending .trend {
+  color: #f6c23e;
+}
+ */
+
+
+
+
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f5f7fa;
+        }
+
+        .navbar {
+            background-color: #2c3e50;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #3498db;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-links a:hover {
+            color: #3498db;
+        }
+
+        .user-profile {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .profile-pic {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #3498db;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+
+        /* Navbar logout button styles */
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logout-btn {
+    background-color: transparent;
+    color: #333;
+    border: 1px solid #ddd;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.3s;
+}
+
+.logout-btn:hover {
+    background-color: #f8f9fa;
+    border-color: #ccc;
+}
+
+.logout-btn svg {
+    margin-right: 5px;
+}
+
+/* body */
+        .stats-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7rem;
+            padding: 3.5rem;
+            justify-content: center;
+        }
+
+          .stats-container2 {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10rem;
+            padding: 2rem;
+            justify-content: center;
+        }
+
+        .stat-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            width: 300px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-card h3 {
+            color: #555;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .stat-card a {
+           text-decoration: none;
+        }
+
+        .stat-card .count {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-card .trend {
+            font-size: 0.9rem;
+        }
+
+        .create { border-left: 4px solid #3498db; }
+        .pending { border-left: 4px solid #f39c12; }
+        .approved { border-left: 4px solid #2ecc71; }
+        .rejected { border-left: 4px solid #e74c3c; }
+
+        .trend.up { color: #2ecc71; }
+        .trend.down { color: #e74c3c; }
+        .trend.neutral { color: #f39c12; }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                padding: 1rem;
+            }
+
+            .nav-links {
+                margin: 1rem 0;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .user-profile {
+                margin-top: 1rem;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer styles */
+.dashboard-footer {
+    background-color: #f8f9fa;
+    padding: 30px 0 15px;
+    margin-top: 40px;
+    border-top: 1px solid #dee2e6;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 0 15px;
+}
+
+.footer-section h4 {
+    color: #495057;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    color: #6c757d;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #0d6efd;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #e9ecef;
+    color: #6c757d;
+    font-size: 14px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-section {
+        margin-bottom: 20px;
+    }
+}
