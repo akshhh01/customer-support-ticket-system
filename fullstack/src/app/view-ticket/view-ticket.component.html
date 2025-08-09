@@ -1,0 +1,59 @@
+<body>
+ <div *ngIf="user?.role==='CUSTOMER'">
+<app-customer-nav></app-customer-nav>
+</div>
+<!-- <div *ngIf="user?.role==='ADMIN'">
+  <app-admin-nav></app-admin-nav>
+</div> -->
+  <!-- Main Content -->
+  <div class="container">
+    <header>
+      <h1>My Tickets</h1>
+      <a routerLink="/create-ticket" class="btn">Create New Ticket</a>
+    </header>
+
+    <!-- Ticket List -->
+    <div *ngIf="tickets.length > 0; else emptyState">
+      <div class="ticket-list">
+        <div class="ticket-card" *ngFor="let item of tickets">
+          <div class="ticket-header">
+            <a [routerLink]="['/ticket-detail', item.id]" class="ticket-title">{{ item.subject }}</a>
+            <span class="ticket-status status-open">{{ item.status }}</span>
+          </div>
+          <div class="ticket-meta">
+            <span>#TKT-{{ item.id }}</span>
+            <span>{{ item.createdAt }}</span>
+          </div>
+          <p class="ticket-excerpt">
+            {{ item.description }}...
+          </p>
+          <div class="ticket-footer">
+            <span class="priority" [ngClass]="'priority-' + item.priority.toLowerCase()">
+              {{ item.priority }} Priority
+            </span>
+
+            <div class="comment">
+              <button (click)="addComment(item)">💬</button>
+            </div>
+          </div>
+          <div><span>
+                created-by  {{item.createdBy}}
+              </span></div>
+          <div *ngIf="item.status === 'PENDDING'">
+  <div class="assignTo">
+    <button (click)="assignTo(item)">AssignTo</button>
+  </div>
+</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Empty State -->
+    <ng-template #emptyState>
+      <div class="empty-state">
+        <h3>No tickets found</h3>
+        <p>You haven't created any tickets yet. Click the button above to create your first ticket.</p>
+      </div>
+    </ng-template>
+  </div>
+</body>

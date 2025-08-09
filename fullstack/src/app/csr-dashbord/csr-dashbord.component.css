@@ -1,0 +1,131 @@
+/* Layout */
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Header */
+header h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 2rem;
+}
+
+/* Ticket List */
+.ticket-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Ticket Card */
+.ticket-card {
+  background: #f9f9f9;
+  border-left: 5px solid #3498db;
+  padding: 1.2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Header */
+.ticket-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ticket-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #2c3e50;
+}
+
+.ticket-title:hover {
+  color: #2980b9;
+}
+
+.ticket-status {
+  font-weight: bold;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  background-color: #f39c12;
+  color: white;
+}
+
+/* Metadata */
+.ticket-meta {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Description */
+.ticket-excerpt {
+  margin: 0.8rem 0;
+  color: #2c3e50;
+}
+
+/* Footer */
+.ticket-footer {
+  margin-bottom: 1rem;
+}
+
+.priority {
+  font-weight: bold;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+}
+
+.priority-high {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.priority-medium {
+  background-color: #f1c40f;
+  color: #000;
+}
+
+.priority-low {
+  background-color: #2ecc71;
+  color: white;
+}
+
+/* Actions */
+.ticket-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.ticket-actions select {
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.ticket-actions button {
+  background-color: #3498db;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.ticket-actions button:hover {
+  background-color: #2980b9;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  margin-top: 2rem;
+  color: #7f8c8d;
+}

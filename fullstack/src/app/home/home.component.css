@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+   font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.navbar{
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+background-color: darkslategrey;
+padding: 20px 20px;
+color: aliceblue;
+ font-family: Arial, sans-serif;
+}
+.material-symbols-outlined {
+  font-size: 30px;
+}
+
+.navbar .navbar-d1{
+  cursor: pointer;
+color: aqua;
+font-size: 20px;
+display: flex;
+align-items: center;
+  gap: 8px;
+}
+
+.navbar .navbar-d2{
+  align-items: center;
+  gap: 20px;
+  display: flex;
+justify-content: space-between;
+}
+
+
+.navbar .navbar-d2 .home{
+    cursor: pointer;
+  text-transform: capitalize;
+  position: relative;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background 0.3s;
+
+  cursor: pointer;
+  display: flex;
+  justify-content: space-evenly;
+}
+.navbar-d2 .home:hover {
+  background-color: rgb(255, 255, 255);
+  color: darkslategrey;
+}
+
+
+.navbar-d3 button {
+  padding: 8px 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.navbar-d3 button:hover {
+  background-color: #49ae4e;
+}
+
+
+
+.hero{
+  /* background-image: url("../../assets/image.jpg"); */
+  /* background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ7MEZTCJXEdnen2Ug9AWoiJl_QDazfENepw&s"); */
+ background-image: url("https://www17.wellsfargomedia.com/assets/images/contextual/responsive/marquee/PS_CustSrvc_MarqCent_v1_1700x600.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh;
+  padding-top: 425px;
+  padding-left: 60px;
+  position: sticky;
+}
+
+.hero-a1{
+  width: 550px;
+  justify-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hero-a1 h1{
+  font-weight: bolder;
+}
+
+.hero-a1 p{
+  padding-top: 25px;
+   width: 425px;
+   font-weight: 600;
+  font-size: large;
+}
+
+.hero1{
+  background-color: rgb(0, 14, 34);
+  justify-content: center;
+  display: flex;
+  height: 20vh;
+  align-items: center;
+  color: aliceblue;
+  font-size: 30px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  letter-spacing: 13px;
+  font-family: "Montserrat", sans-serif;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  font-style: italic;
+  font-variant: small-caps;
+}
+
+.hero1-a1 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+  padding: 20px;
+}
+
+   .container1 {
+    display: flex;
+    height: 100vh;
+    background-color: #787272;
+    width: 100%;
+  }
+
+  .container1 .container2{
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 6%;
+    height: 80vh;
+    display: flex;
+  }
+ .container1 .container2 .container3{
+    width: 60%;
+    height: 80vh;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    justify-items: center;
+    display: flex;
+  }
+
+.container1 .container2 .img-container{
+  background-image: url("../../assets/sign-image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 50%;
+
+}
+.container1 .container2 .img-container button{
+  width: 15%;
+  height: 13%;
+  border-radius: 100px;
+  margin-top: 370px;
+  margin-left: 40px;
+  background-color: transparent;
+  color: #fff;
+}
+
+
+.container1 .container2 .img-container button:hover{
+  text-transform: uppercase;
+}

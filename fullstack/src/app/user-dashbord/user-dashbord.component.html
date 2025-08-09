@@ -1,0 +1,62 @@
+<app-customer-nav></app-customer-nav>
+
+<div class="stats-container">
+   <div class="stat-card create"><a href="create-ticket">
+        <h3>Create Tickets</h3>
+        <p class="count">{{tickets.length}}</p>
+        <p class="trend up">↑ 12% this week</p></a>
+    </div>
+
+    <div class="stat-card approved"><a href="view-all">
+        <h3>View Tickets</h3>
+        <p class="count">{{total}}</p>
+        <p class="trend up">↑ 5% this week</p></a>
+    </div>
+</div>
+
+<div class="stats-container2">
+   <div class="stat-card pending"><a href="pandding">
+        <h3>Pending Tickets</h3>
+        <p class="count">{{pandding}}</p>
+        <p class="trend neutral">→ Same as last week</p></a>
+    </div>
+
+    <div class="stat-card pending"><a href="resolve">
+        <h3>Resolved Tickets</h3>
+        <p class="count">{{resolve}}</p>
+        <p class="trend neutral">→ Same as last week</p></a>
+    </div>
+</div>
+<footer class="dashboard-footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="/user-dash">Dashboard</a></li>
+                <li><a href="/user-dash/tickets">Tickets</a></li>
+                <li><a href="/user-dash/profile">Profile</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Support</h4>
+            <ul>
+                <li><a href="/help">Help Center</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+                <li><a href="/faq">FAQs</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Company</h4>
+            <ul>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/privacy">Privacy Policy</a></li>
+                <li><a href="/terms">Terms of Service</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 CustomerDashboard. All rights reserved.</p>
+    </div>
+</footer>
+
+

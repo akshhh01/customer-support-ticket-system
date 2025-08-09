@@ -1,0 +1,38 @@
+
+<app-customer-nav></app-customer-nav>
+
+<div class="ticket-form">
+  <h2>Create New Ticket</h2>
+  <form (ngSubmit)="createTicket()" #form="ngForm">
+    <div class="form-group">
+      <label for="ticketSubject">Subject:</label>
+      <input type="text" [(ngModel)]="ticket.subject" id="ticketSubject" name="subject" required
+             placeholder="Brief description of your issue"
+             class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label for="ticketDescription">Description:</label>
+      <textarea id="ticketDescription" [(ngModel)]="ticket.description" name="description" required
+                placeholder="Please provide detailed information about your issue..."
+                rows="5" class="form-control"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="ticketPriority">Priority:</label>
+      <select id="ticketPriority" [(ngModel)]="ticket.priority" name="priority" class="form-control" required>
+        <option value="">Select priority level</option>
+        <option value="LOW">Low</option>
+        <option value="MEDIUM">Medium</option>
+        <option value="HIGH">High</option>
+        <option value="URGENT">urgent</option>
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Create Ticket</button>
+  </form>
+
+  <div *ngIf="message">
+    {{message}}
+  </div>
+</div>

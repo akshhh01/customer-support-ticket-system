@@ -1,0 +1,34 @@
+  <!-- <app-admin-nav></app-admin-nav> -->
+
+
+
+<body>
+  <h1>CSR Data</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Role</th>
+        <th>View Tickets</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let item of csrs">
+        <tr *ngIf="item.id !== null">
+          <td data-label="ID">{{ item.id }}</td>
+          <td data-label="Name">{{ item.name }}</td>
+          <td data-label="Email">{{ item.email }}</td>
+          <td data-label="Phone">{{ item.mobile }}</td>
+          <td data-label="Role">{{ item.role }}</td>
+          <td data-label="View Tickets">
+            <button (click)="getTicket(item.id)">View</button>
+          </td>
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>
+</body>

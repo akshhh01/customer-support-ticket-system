@@ -1,0 +1,173 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  background-color: #f4f6f8;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+  .container3{
+    width: 60%;
+    height: 80vh;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    justify-items: center;
+    display: flex;
+  }
+
+
+.container3 input{
+   border-style: none;
+   text-decoration: none;
+   width: 250px;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+ }
+
+h3.text-center {
+  margin-bottom: 25px;
+  font-weight: 600;
+  color: #343a40;
+}
+
+.container3 label{
+  text-align: center;
+  justify-self: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: 15px;
+  font-weight: 600;
+  color: black;
+margin-top: 5px;
+}
+ .container3 hr{
+  margin-top: 0px;
+  justify-self: center;
+  width: 250px;
+}
+ .container3 .btn{
+  margin-top: 30%;
+  width: 100%;
+  background-color: darkslategrey;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  margin-bottom: 5%;
+  padding: 10px;
+  border-radius: 25px;
+   text-transform: uppercase;
+}
+
+
+.container3 .sign{
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  border-radius: 25px;
+  border: #000000 solid 2px;
+  text-transform: uppercase;
+}
+.btn-warning {
+  width: 100%;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+.alert {
+  border-radius: 10px;
+  font-size: 14px;
+  padding: 10px 15px;
+  margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+.container {
+  padding-top: 200px;
+   width: 60%;
+    height: 80vh;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    justify-items: center;
+    /* display: flex; */
+}
+.container input{
+   border-style: none;
+   text-decoration: none;
+   width: 250px;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+ }
+
+
+  .container hr{
+  margin-top: 0px;
+  justify-self: center;
+  width: 250px;
+}
+
+.container label{
+  text-align: center;
+  justify-self: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: 15px;
+  font-weight: 600;
+  color: black;
+margin-top: 5px;
+}
+
+
+.otp-message {
+  font-size: 17px;
+  margin-bottom: 15px;
+  color: #333;
+  font-weight: 500;
+}
+
+
+.otp-box .text-muted {
+  font-size: 14px;
+  color: #6c757d;
+  margin-bottom: 10px;
+}
+
+
+
+ .container .btn{
+  margin-top: 30%;
+  width: 100%;
+  background-color: darkslategrey;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  margin-bottom: 5%;
+  padding: 10px;
+  border-radius: 25px;
+   text-transform: uppercase;
+}

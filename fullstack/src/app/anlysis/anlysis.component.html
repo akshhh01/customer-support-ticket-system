@@ -1,0 +1,117 @@
+<div *ngIf="user.role=='ADMIN'">
+<app-admin-nav></app-admin-nav></div>
+<div *ngIf="user.role=='CUSTOMER'">
+<app-customer-nav></app-customer-nav></div>
+<div *ngIf="user.role=='CSR'">
+<app-csr-nav></app-csr-nav></div>
+  <div class="ima">
+<div class="dashboard-container">
+  <h2>📊 Analysis Dashboard</h2>
+
+  <div class="kpi-cards">
+    <div class="kpi-card purple" *ngIf="user.role=='ADMIN'">
+      <h3>Total Users</h3>
+      <p>{{ users.length }}</p>
+    </div>
+    <div class="kpi-card pink">
+      <h3>Total Tickets</h3>
+      <p>{{ totalTicket }}</p>
+    </div>
+    <div class="kpi-card blue">
+      <h3>Total Comments</h3>
+      <p>{{ comments.length }}</p>
+    </div>
+    <div class="kpi-card green">
+      <h3>Your Comments</h3>
+      <p>{{ your }}</p>
+    </div>
+  </div>
+
+  <div class="charts-container">
+    <div class="chart-box" *ngIf="user.role=='ADMIN'">
+      <h4>User Roles</h4>
+         <canvas #callsChart baseChart
+            [data]="{ labels: callsLabels, datasets: [{ data: callsData, backgroundColor: callsColors }] }"
+            [type]="'pie'">
+    </canvas>
+    </div>
+
+    <div class="chart-box">
+      <h4>Ticket Status</h4>
+       <canvas #messagesChart baseChart
+            [data]="{ labels: messagesLabels, datasets: [{ data: messagesData, backgroundColor: messagesColors }] }"
+            [type]="'pie'">
+    </canvas>
+    </div>
+
+    <div class="chart-box">
+      <h4>Comments Source</h4>
+      <!-- <canvas baseChart
+              [data]="{ labels: commentLabels, datasets: [{ data: commentData, backgroundColor: commentColors }] }"
+              [type]="'pie'">
+      </canvas> -->
+         <canvas #commentsChart baseChart
+            [data]="{ labels: commentLabels, datasets: [{ data: commentData, backgroundColor: commentColors }] }"
+            [type]="'pie'">
+    </canvas>
+    </div>
+  </div>
+</div>
+  <button (click)="generatePdfWithCharts()">Generate PDF with Charts</button>
+</div>
+
+
+
+
+
+
+<!--
+
+
+
+<div class="kpi-cards">
+  <div class="kpi-card purple" *ngIf="user.role=='ADMIN'">
+    <h3>Total Users</h3>
+    <p>{{ users.length }}</p>
+  </div>
+  <div class="kpi-card pink">
+    <h3>Total Tickets</h3>
+    <p>{{ totalTicket }}</p>
+  </div>
+  <div class="kpi-card blue">
+    <h3>Total Comments</h3>
+    <p>{{ comments.length }}</p>
+  </div>
+  <div class="kpi-card green">
+    <h3>Your Comments</h3>
+    <p>{{ your }}</p>
+  </div>
+</div>
+
+<div class="charts-container">
+  <div class="chart-box" *ngIf="user.role=='ADMIN'">
+    <h4>User Roles</h4>
+    <canvas #callsChart baseChart
+            [data]="{ labels: callsLabels, datasets: [{ data: callsData, backgroundColor: callsColors }] }"
+            [type]="'pie'">
+    </canvas>
+  </div>
+
+  <div class="chart-box">
+    <h4>Ticket Status</h4>
+    <canvas #messagesChart baseChart
+            [data]="{ labels: messagesLabels, datasets: [{ data: messagesData, backgroundColor: messagesColors }] }"
+            [type]="'pie'">
+    </canvas>
+  </div>
+
+  <div class="chart-box">
+    <h4>Comments Source</h4>
+    <canvas #commentsChart baseChart
+            [data]="{ labels: commentLabels, datasets: [{ data: commentData, backgroundColor: commentColors }] }"
+            [type]="'pie'">
+    </canvas>
+  </div>
+</div>
+
+<button (click)="generatePdfWithCharts()">Generate PDF with Charts</button> -->

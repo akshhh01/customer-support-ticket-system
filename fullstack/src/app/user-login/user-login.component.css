@@ -1,0 +1,64 @@
+
+  .container3{
+    width: 60%;
+    height: 80vh;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    justify-items: center;
+    display: flex;
+  }
+.container3 input{
+   border-style: none;
+   text-decoration: none;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+ }
+
+ .container3 label{
+  text-align: center;
+  justify-self: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: 15px;
+  font-weight: 600;
+  color: black;
+margin-top: 20px;
+}
+.container3 hr{
+  justify-self: center;
+  width: 100%;
+}
+.container3 .btn{
+  margin-top: 30%;
+  width: 100%;
+  background-color: darkslategrey;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  margin-bottom: 5%;
+  padding: 10px;
+  border-radius: 25px;
+   text-transform: uppercase;
+}
+
+ .container3 .sign{
+  /* margin-top: 20px; */
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  border-radius: 25px;
+  border: #000000 solid 2px;
+  text-transform: uppercase;
+}
+

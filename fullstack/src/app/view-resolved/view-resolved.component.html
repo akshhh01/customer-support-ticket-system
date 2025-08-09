@@ -1,0 +1,56 @@
+<div *ngIf="user?.role==='CUSTOMER'">
+<app-customer-nav></app-customer-nav>
+</div>
+<!-- <div *ngIf="user?.role==='ADMIN'">
+  <app-admin-nav></app-admin-nav>
+</div> -->
+
+
+<body>
+  <div class="container">
+    <header>
+      <h1>Resolved Tickets</h1>
+    <a href="/create-ticket" class="btn">Create New Ticket</a>
+    </header>
+
+    <div class="ticket-filters">
+  <button class="filter-btn active"><a href="/view-all">All Tickets</a></button>
+    </div>
+
+    <!-- Tickets list -->
+    <div *ngIf="tickets && tickets.length > 0">
+      <div class="ticket-list">
+        <div class="ticket-card" *ngFor="let item of resolve">
+          <div class="ticket-header">
+            <a [href]="'ticket-detail.html?id=' + item.id" class="ticket-title">{{ item.subject }}</a>
+            <span class="ticket-status status-open">{{ item.status }}</span>
+          </div>
+          <div class="ticket-meta">
+            <span>#TKT-{{ item.id }}</span>
+            <span>{{ item.createdAt}}</span>
+          </div>
+          <p class="ticket-excerpt">
+            {{ item.description }}...
+          </p>
+          <div class="ticket-footer">
+            <span class="priority" [ngClass]="'priority-' + item.priority.toLowerCase()">
+              {{ item.priority }} Priority
+            </span>
+             <div class="comment">
+            <button (click)="addComment(item)">💬</button>
+          </div>
+          <div><span>
+                created-by  {{item.createdBy}}
+              </span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Empty state -->
+    <div class="empty-state" *ngIf="resolve && resolve.length === 0">
+      <h3>No tickets found</h3>
+      <p>You haven't pandding any tickets yet. Click the button above to create your ticket.</p>
+    </div>
+  </div>
+</body>

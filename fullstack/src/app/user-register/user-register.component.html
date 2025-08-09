@@ -1,0 +1,74 @@
+  <div *ngIf="!isOtpSent">
+    <div class="container3">
+      <form (ngSubmit)="getOtp()" #form="ngForm">
+        <div>
+          <label>Name</label>
+          <input type="text" [(ngModel)]="user.name" name="name" required />
+          <hr>
+        </div>
+
+        <div>
+          <label>Email</label>
+          <input type="email" [(ngModel)]="user.email" name="email" required />
+          <hr>
+        <div *ngIf="email" [ngClass]="isEmail ? 'alert alert-danger' : 'alert alert-success'">
+          {{ email }}
+        </div>
+      </div>
+
+      <div>
+        <label>Password</label>
+        <input type="password" [(ngModel)]="user.password" name="password" required />
+        <hr>
+        <div *ngIf="password" [ngClass]="isPassword ? 'alert alert-danger' : 'alert alert-success'">
+          {{ password }}
+        </div>
+      </div>
+
+      <div>
+        <label>Mobile</label>
+        <input type="text" [(ngModel)]="user.mobile" name="mobile" required />
+        <hr>
+        <div *ngIf="mobile" [ngClass]="isMobile ? 'alert alert-danger' : 'alert alert-success'">
+          {{ mobile }}
+        </div>
+      </div>
+
+      <div>
+        <label>Select Role</label>
+        <select id="role" name="role" [(ngModel)]="user.role" required>
+          <option value="CUSTOMER">Customer</option>
+          <option value="CSR">CSR</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn" [disabled]="form.invalid">Get OTP</button>
+      <div *ngIf="message" [ngClass]="isError ? 'alert alert-danger' : 'alert alert-success'">
+        {{ message }}
+      </div>
+    </form>
+  </div>
+</div>
+<div>{{otp1}}</div>
+  <!-- OTP Verification -->
+
+    <div *ngIf="isOtpSent">
+
+  <div class="container">
+    <label for="">OTP</label>
+    <input type="text" [(ngModel)]="otp" name="otp" required />
+    <hr>
+    <div class="text-muted">{{ time }} seconds</div>
+    <p class="otp-message">{{ message }}</p>
+
+         <button *ngIf="!resendButton" class="btn btn-success mt-3" (click)="verify()">
+           Verify OTP
+          </button>
+
+          <button *ngIf="resendButton" class="btn btn-warning mt-3" (click)="resend()">
+            Resend OTP
+          </button>
+        </div>
+
+
+</div>

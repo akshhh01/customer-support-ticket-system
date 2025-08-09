@@ -1,0 +1,179 @@
+/* Wrapper to hold background + content */
+/* .dashboard-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.dashboard-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://www.shutterstock.com/image-photo/big-data-visualization-concept-machine-600nw-2193979631.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(5px);
+  z-index: 0;
+}
+
+.dashboard-container {
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+}
+
+.kpi-cards > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.kpi-card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  width: 200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.kpi-card:hover {
+  transform: translateY(-5px);
+}
+
+.kpi-card h4 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.kpi-card p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #7b2cbf;
+}
+
+.chart-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.chart-card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  width: 300px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.chart-card h5 {
+  margin-bottom: 1rem;
+  color: #444;
+  font-size: 1.1rem;
+} */
+
+
+.dashboard-container {
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+  background-color: transparent;
+}
+
+.ima {
+   background-image: url('https://media.istockphoto.com/id/1988186439/vector/business-financial-chart-with-moving-up-arrow-graph-stock-market-investment-data-and.jpg?s=612x612&w=0&k=20&c=PbkW9ZVXZoMb4HhmyrQn4CYgeWchuIECEnMl2MxF2_8=');
+   background-size: cover;
+  width: 100%;
+  height: 90vh;
+}
+
+.dashboard-container h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #efefef;
+}
+
+.kpi-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.kpi-card {
+  flex: 1 1 20%;
+  min-width: 200px;
+  padding: 1.2rem;
+  border-radius: 12px;
+  color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  /* background-color: transparent; */
+  transition: transform 0.2s ease;
+}
+
+.kpi-card:hover {
+  transform: scale(1.05);
+}
+
+.kpi-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.kpi-card p {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.purple { background-color: transparent; }
+.pink { background-color: transparent; }
+.blue { background-color: transparent; }
+.green { background-color: transparent; }
+
+.purple:hover { background-color: #7b2cbf; transition: all 0.4s;}
+.pink:hover { background-color: #ff69b4;transition: all 0.4s; }
+.blue:hover { background-color: #4361ee; transition: all 0.4s;}
+.green:hover { background-color: #33f40c;transition: all 0.4s; }
+
+.charts-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-around;
+}
+
+.chart-box {
+  /* color: whitesmoke; */
+  width: 300px;
+  background-color: transparent;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.chart-box h4 {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: white;
+}
+
+.chart-box:hover {
+  /* background-color: rgba(255, 255, 255, 0.1); */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 1);
+ scale: 1.05;
+ transition: all 0.3s;
+}

@@ -1,0 +1,26 @@
+
+      <div class="container3">
+        <form (ngSubmit)="userLogIn(logInData.email,logInData.password)">
+          <div>
+            <label for="email">Email</label>
+            <input type="email" [(ngModel)]="logInData.email" name="email" value="logInData.email" required/>
+            <hr>
+            <div *ngIf="email" [ngClass]="isEmail ? 'alert alert-danger' : 'alert alert-success'">
+              {{ email }}
+            </div>
+          </div>
+          <div>
+            <label for="password">Password</label>
+            <input type="password" [(ngModel)]="logInData.password" [ngModelOptions]="{standalone:true}" name="Password"
+            value="logInData.password"  required/>
+            <hr>
+            <div *ngIf="password" [ngClass]="isPassword ? 'alert alert-danger' : 'alert alert-success'">
+              {{ password }}
+            </div>
+          </div>
+          <button type="submit" class="btn">log-in</button>
+          <div *ngIf="message" [ngClass]="isError ? 'alert alert-danger' : 'alert alert-success'"> {{ message }}
+          </div>
+        </form>
+      </div>
+
